@@ -132,7 +132,7 @@ A risk matrix is a matrix that is used during risk assessment to define the leve
 Risk is the lack of certainty about the outcome of making a particular choice and can be calculated as the the probability multiplied by the severity of a given risk.
 
 |**Likelihood →<br>Impact ↓**|**1**|**2**|**3**|**4**|**5**|
-|---|---|---|---|---|
+|---|---|---|---|---|---|
 |**1**|1|2|3|4|5|
 |**2**|2|4|6|8|10|
 |**3**|3|6|9|12|15|
