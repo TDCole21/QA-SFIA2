@@ -131,13 +131,23 @@ Risk Assessment Matrix
 A risk matrix is a matrix that is used during risk assessment to define the level of risk by considering the category of probability or likelihood against the category of consequence severity. This is a simple mechanism to increase visibility of risks and assist management decision making.
 Risk is the lack of certainty about the outcome of making a particular choice and can be calculated as the the probability multiplied by the severity of a given risk.
 
-|**Likelihood →** <br> **Impact ↓**|**1**|**2**|**3**|**4**|**5**|
+| **Risk Value** | **Type of Risk** |
+|---|---|
+| 1-5 | Trivial |
+| 6-10 | Tolerable |
+| 11-15 | Moderate |
+| 16-20- | Substantial |
+| 21-25 | Intolerable |
+
+Therefor the resulting risk matrix is:
+|**Likelihood →** <br> **Impact ↓**|**Rare**|**Unlikely**|**Possible**|**Likely**|**Certain**|
 |---|---|---|---|---|---|
-|**1**|1|2|3|4|5|
-|**2**|2|4|6|8|10|
-|**3**|3|6|9|12|15|
-|**4**|4|8|12|16|20|
-|**5**|5|10|15|20|25|
+|**Minimal**|Trivial|Trivial|Trivial|Trivial|Trivial|
+|**Minor**|Trivial|Trivial|Tolerable|Tolerable|Tolerable|
+|**Moderate**|Trivial|Tolerable|Tolerable|Moderate|Moderate|
+|**Major**|Trivial|Tolerable|Moderate|Substantial|Substantial|
+|**Catastrophic**|Trivial|Tolerable|Moderate|Substantial|Intolerable|
+
 
 |Risk ID|Description|Likelihood (1 -> 5)|Impact (1->5)|Consequence|Response Strategy|
 |---|---|---|---|---|---|
