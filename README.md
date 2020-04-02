@@ -133,27 +133,27 @@ Risk is the lack of certainty about the outcome of making a particular choice an
 
 | **Risk Value** | **Type of Risk** |
 |---|---|
-| 1-5 | Trivial |
-| 6-10 | Tolerable |
-| 11-15 | Moderate |
-| 16-20- | Substantial |
-| 21-25 | Intolerable |
+| <5 | Trivial |
+| <10 | Tolerable |
+| <15 | Moderate |
+| <20 | Substantial |
+| 20+ | Intolerable |
 
 Therefor the resulting risk matrix is:
 |**Likelihood →** <br> **Impact ↓**|**Rare**|**Unlikely**|**Possible**|**Likely**|**Certain**|
 |---|---|---|---|---|---|
-|**Minimal**|Trivial|Trivial|Trivial|Trivial|Trivial|
-|**Minor**|Trivial|Trivial|Tolerable|Tolerable|Tolerable|
-|**Moderate**|Trivial|Tolerable|Tolerable|Moderate|Moderate|
-|**Major**|Trivial|Tolerable|Moderate|Substantial|Substantial|
-|**Catastrophic**|Trivial|Tolerable|Moderate|Substantial|Intolerable|
+|**Minimal**|Trivial|Trivial|Trivial|Trivial|Tolerable|
+|**Minor**|Trivial|Trivial|Tolerable|Tolerable|Moderate|
+|**Moderate**|Trivial|Tolerable|Tolerable|Moderate|Substantial|
+|**Major**|Trivial|Tolerable|Moderate|Substantial|Intolerable|
+|**Catastrophic**|Tolerable|Moderate|Substantial|Intolerable|Intolerable|
 
 
-|Risk ID|Description|Likelihood (1 -> 5)|Impact (1->5)|Consequence|Response Strategy|
-|---|---|---|---|---|---|
-|1.1|Data compromised|4|8|Potential loss of large sections of the project, resulting in setbacks|Using the branch feature in git, and ensuring a frequently updated branch method|
+|Risk ID|Description|Likelihood (1 -> 5)|Impact (1->5)|Risk|Consequence|Response Strategy|
+|---|---|---|---|---|---|---|
+|1.1|Data compromised|2|4|8|Potential loss of large sections of the project, resulting in setbacks|Using the branch feature in git, and ensuring a frequently updated branch method|
 |1.2|GCP (Google Cloud Processing) budget limit exceeded|1|1|Personal financial cost, whilst minimal setback to project progress|Google provides $300 initial budget for all users, and disables the autopayment if the allowance runs out. To prevent this from becoming a problem, I have to ensure that feature doesn't become enabled, and to keep an eye on my remaining budget.|
-|1.3|Internet Connectivity Problems|7|9|A lot of the work for this project is done on virtual machines and requires a constant internet connection. Missing this would require large periods of time without being able to work on or update the project|There is some work that can be drafted offline before being pushed up to the cloud. If the problem seriously effects the work, then let the trainer know, such that it can be taken into consideration|
-|2.1|Time mismanagement|5|8|Falling behind on tasks means rushing on certain aspects of the project and can result in a lower quality of work.|Using methods such as a Trello board and gantt chart to track my progress and ensure I don't fall behind on my work. If my work starts to fall behind, I can work on my project before/after training hours. |
-|2.2|Lack of content knowledge|5|7|A lack of understanding of the content covered in the academy will mean that I am unable to fulfill requirements needed for the project|I will first search the internet fo the answers to any questions I have, then seek peer help if I cannot find the answer, before finally approaching my trainer|
-|2.3|Jenkins pipeline error|3|3|A problem with Jenkins compatibility with the GitHub webhooks would mean that the pipeline would not automatically run for every push to GitHub, compromising the autonomy of the continuous integration|If not able to be resolved by the deadline, then manual build requests in Jenkins can be used.|
+|1.3|Internet Connectivity Problems|4|4|16|A lot of the work for this project is done on virtual machines and requires a constant internet connection. Missing this would require large periods of time without being able to work on or update the project|There is some work that can be drafted offline before being pushed up to the cloud. If the problem seriously effects the work, then let the trainer know, such that it can be taken into consideration|
+|2.1|Time mismanagement|3|4|12|Falling behind on tasks means rushing on certain aspects of the project and can result in a lower quality of work.|Using methods such as a Trello board and gantt chart to track my progress and ensure I don't fall behind on my work. If my work starts to fall behind, I can work on my project before/after training hours. |
+|2.2|Lack of content knowledge|3|4|12|A lack of understanding of the content covered in the academy will mean that I am unable to fulfill requirements needed for the project|I will first search the internet fo the answers to any questions I have, then seek peer help if I cannot find the answer, before finally approaching my trainer|
+|2.3|Jenkins pipeline error|2|2|4|A problem with Jenkins compatibility with the GitHub webhooks would mean that the pipeline would not automatically run for every push to GitHub, compromising the autonomy of the continuous integration|If not able to be resolved by the deadline, then manual build requests in Jenkins can be used.|
