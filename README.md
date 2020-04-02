@@ -137,7 +137,8 @@ Risk is the lack of certainty about the outcome of making a particular choice an
 | <10 | Tolerable |
 | <15 | Moderate |
 | <20 | Substantial |
-| 20+ | Intolerable |
+| <25 | Extreme |
+| 25+ | Intolerable |
 
 Therefor the resulting risk matrix is:
 |**Likelihood →** <br> **Impact ↓**|**Rare**|**Unlikely**|**Possible**|**Likely**|**Certain**|
@@ -145,8 +146,8 @@ Therefor the resulting risk matrix is:
 |**Minimal**|Trivial|Trivial|Trivial|Trivial|Tolerable|
 |**Minor**|Trivial|Trivial|Tolerable|Tolerable|Moderate|
 |**Moderate**|Trivial|Tolerable|Tolerable|Moderate|Substantial|
-|**Major**|Trivial|Tolerable|Moderate|Substantial|Intolerable|
-|**Catastrophic**|Tolerable|Moderate|Substantial|Intolerable|Intolerable|
+|**Major**|Trivial|Tolerable|Moderate|Substantial|Extreme|
+|**Catastrophic**|Tolerable|Moderate|Substantial|Extreme|Intolerable|
 
 
 |Risk ID|Description|Likelihood (1 -> 5)|Impact (1->5)|Risk|Consequence|Response Strategy|
