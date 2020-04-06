@@ -31,6 +31,10 @@ This is a project, worked on independently of others, in reference to the QA Lea
     3. [Ongoing Risk Assessment](#ongoing_risk_assessment)
     4. [Final Risk Assessment](#final_risk_assessment)
 5. [Project Architecture](#project_architecture)
+    1. [Deployment](#project_deployment)
+    2. [Use Case Diagram/ User Stories](#use_case_diagram)
+    3. [Service Architecture Diagram](#service_architecture_diagram)
+    4. [Entity Relationship Diagrams (ERD)](#entity_relationship_diagrams)
 6. [Testing](#testing)
     1. [Unit Testing](#unit_testing)
     2. [Integration Testing](#integration_testing)
@@ -65,23 +69,25 @@ The Tech Stack requirements are the following:
 |Technology Required|Used in this project|
 |:---:|:---:|
 |Kanban Board|Trello|
-|Version Control System (VCS)|Git|
+|Version Control System (VCS)|Git and Dockerhub|
 |CI Server|Jenkins|
 |Cloud server|GCP virtual machines|
 |Containerisation|Docker|
 |Configuration Management|Ansible|
-|Orchestration Tool|Docker Swarm|
+|Orchestration Tool|Docker Swarm and Docker Stack|
 
 
 
 |Additional Technology|Used in this project|
 |:---:|:---:|
 |Database|Google Cloud Platform (GCP) SQL Server|
-|Programming language|Python (including MySQL)|
+|Programming language|Python and MySQL|
 |Unit Testing with Python|Pytest|
 |Integration Testing with Python|Coverage|
 |Acceptance Testing with Python|Selenium|
-|Front-end|Flask (including Jinja2) and HTML (including CSS and Bootstrap)|
+|Front-end|Flask and HTML (including Jinja2, CSS and Bootstrap)|
+|Load Balancing|Nginx|
+|IDE|Visual Studio Code|
 
 
 ### Project Architecture <a name="project_architecture"></a>
@@ -129,7 +135,7 @@ I defined "done" as to mean that the feature had been successfully implemented i
 
 #### First Sprint <a name="sprint1"></a>
 To include the initial kanban board.
-[Imgur](https://i.imgur.com/YmGYZC2.png)
+![Initial Kanban Board](https://i.imgur.com/YmGYZC2.png)
 
 #### Nth Sprint <a name="sprintn"></a>
 To include the nth kanban board.
@@ -147,7 +153,7 @@ For this project I used a feature branch model that has three tiers:
 + Developer Branch, this manages all the features and only merges to the Master Branch once fully tested
 + Feature Branches, these branches are where the edits are made and then merged with the developer branch.
 A diagram of this model is shown below:
-![Feature branch model.](https://i.imgur.com/hYX8eGv.png)
+![Feature branch model](https://i.imgur.com/hYX8eGv.png)
 
 |Node|Description|
 |:---:|:---:|
@@ -228,11 +234,17 @@ How I added/removed/edited risks as the project progressed
 The resulting risk assessment
 
 ## Project Architecture <a name="project_architecture"></a>
+### Deployment <a name="project_deployment"></a>
 Detail how the backend processes work, from visual code to github to jenkins etc.
+### Use Case Diagram/ User Stories <a name="use_case_diagram"></a>
 Also detail how the code works front end for the user stories
+### Service Architecture Diagram <a name="service_architecture_diagram"></a>
 Wireframes for application/architecture diagram for servers
-
 Show functionality of servers 1,2,3 and 4.
+
+### Entity Relationship Diagrams (ERD) <a name="entity_relationship_diagrams"></a>
+I used an ERD to help draft my database. I opted for the MoSCow Prioritisation Method, so focus on producing an MVP for the deadline.
+
 
 ## Testing <a name="testing"></a>
 I used a unit, integration and acceptance testing method as a measure of my code quality for the application.
