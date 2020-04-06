@@ -79,38 +79,66 @@ Service #4 will also create an “Object” however this “Object” must be ba
 This section will detail the project management tools and techniques used to plan the project, and how they were utilised and adapted throughout the project.
 
 ### Agile Methodology <a name="agile"></a>
-Similar to the SFIA foundation project, I implemented an Agile methodology over the Waterfall methodology due to Agile's values and principles allowing for testing to be completed in the same iteration as programming, dynamic project aims and working code over comprehensive documentation.
-Due to the nature of my project, some of the values and principles of Agile had to be adapted:
+For this project I implemented an Agile methodology. I chose to use Agile over other methodologies, such as Waterfall, due to Agile's values and principles. These allow for dynamic project aims, prioritising working code over comprehensive documentation and for testing to be completed in the same iteration as programming.
+However, the Agile methodology is intended to be implemented in a team environment working to produce a product for a customer. Due to the nature of my project being independent and not to be distributed to a customer, some of the values and principles had to be adapted:
 + **Individuals and Interactions over processes and tools:**
-The project was an individual project, so there was no need for team interactions such as daily scrums.
-Instead, I provided plenty feedback to my trainer and documentation.
+Normally, this would involve daily team scrums and sprint reviews, instead, I had a daily standup with my trainer, and used various project management tools such as gannt charts and kanban boards to maintain all areas of the project were being tracked simultaneously.
 + **Working Software over comprehensive documentation:**
-The purpose of this project is to show my understanding of the content taught in the from weeks five to eight.
-So comprehensive documentation is important, however, I took adapted this value to mean that the application must be functional over beautiful.
+This value is designed to prioritise a working end product over a un-finished well documented project. However, my projects scope is designed to make sure that I understand the content, hence, comprehensive documentation is required for the purpose of this project. Instead, I prioritised working functionalities over front-end design.
 + **Customer Collaboration over contract negotiation:**
-This project had no customer, other than users and the trainers at QA. So, I imagined virtual users and treated my trainer as a customer.
+The application would have no users or customers. So, I acted as the users and treated my trainer as a customer.
 + **Responding to Change over following a plan:**
 All my project management allowed additional time for change.
 
 ### Kanban Board <a name="kanban_board"></a>
 As stated for the MVP, I was required to follow best practices within industry and use a Kanban board to manage my project. I chose to use the Trello application to create my Kanban board, due to my familiarity with the software, having seen it used at QA.
 
-The board is designed around user stories to test the CRUD functionalities of the application. These stories are then represented in the product backlog, along with other features needed for the specifics of the project (create this README file for example). These product backlogs are then further broken down in to a sprint backlog, tasks, progress, done and bugs list. These additional lists allow for dynamic progress updates of the project and to maintain specific obtainable objectives throughout the project to allow for a deliverable product by the deadline.
+The board is designed around user stories to test the functionalities of the application. These stories are then represented in the product backlog. These product backlogs are then further broken down in to a sprint backlog, tasks, progress, done and bugs list. These additional lists allow for dynamic progress updates of the project and to maintain specific obtainable objectives throughout the project to allow for a deliverable product by the deadline.
 
-I defined "done" as to mean that the feature had been successfully implemented into the application, and had no negative effect on the pytest application which is detailed later.
-Any implemented feature that negatively effected the performance of the application were logged into the bugs column.
+I used the MoSCow Prioritisation Method on the Kanban Board with the following key:
+|MoSCow Method Key|Colour Used|
+|:---:|:---:|
+|Must Have|Green|
+|Should Have|Orange|
+|Could Have|Yellow|
+
+
+I defined "done" as to mean that the feature had been successfully implemented into the application, and had no negative effect on the testing features. If a feature negatively impacted the test results, they were logged into the bugs column.
 
 #### First Sprint <a name="sprint1"></a>
-To include the initial kanban board and an updated board per completed sprint.
+To include the initial kanban board.
+
+#### Nth Sprint <a name="sprint1"></a>
+To include the nth kanban board.
+
+#### Final Sprint <a name="sprint1"></a>
+To include the final kanban board.
+
+#### Future Sprint <a name="sprint1"></a>
+To include the a kanban board that details how I would implement future improvements.
 
 
 ## Feature Branch Model <a name="feature_branch"></a>
+For this project I used a feature branch model that has three tiers:
++ Master Branch, which is associated with the Jenkins CI webhook. This acts as the production application
++ Developer Branch, this manages all the features and only merges to the Master Branch once fully tested
++ Feature Branches, these branches are where the edits are made and then merged with the developer branch.
+A diagram of this model is shown below:
+![Feature branch model.](https://i.imgur.com/hYX8eGv.png)
+|Node|Description|
+A: Initial production version
+B: Initial developer version
+C,G,E,I: Feature branch, server #1,#2,#3 and #4 completed respectively and pushed to developer branch
+D,F,H: Next production release pushed up from developer branch
+J: Final production release
+K: Ongoing Devloper branch
 
 ## Risk Assessment <a name="risk_assessment"></a>
-The Risk Analysis categories are: Risk ID, Description, Likelihood, Impact, Consequence and Response Strategy.
-The Risk Management categories are: Response Strategy.
-Risk IDs 1.X are Operational Risks and 2.X are Objective Risks.
+A risk assessment determines possible mishaps, their likelihood and consequences, and the tolerances for such events. It is a combined effort of identifying and analysing potential (future) events that may negatively impact the project and making judgments on the tolerability of the risk on the basis of a risk analysis while considering influencing factors.
 
+### Risk Assessment Matrix <a name="risk_matrix"></a>
+A risk matrix is a matrix that is used during risk assessment to define the level of risk by considering the category of probability or likelihood against the category of consequence severity. This is a simple mechanism to increase visibility of risks and assist management decision making.
+Risk is the lack of certainty about the outcome of making a particular choice and can be calculated as the the probability multiplied by the severity of a given risk.
 
 | **Probability/Likelihood Value** | **Chance of occurring during the course of the project** |
 |:---:|:---:|
@@ -130,10 +158,6 @@ Risk IDs 1.X are Operational Risks and 2.X are Objective Risks.
 | **4** | Major |
 | **5** | Catastrophic |
 
-
-Risk Assessment Matrix
-A risk matrix is a matrix that is used during risk assessment to define the level of risk by considering the category of probability or likelihood against the category of consequence severity. This is a simple mechanism to increase visibility of risks and assist management decision making.
-Risk is the lack of certainty about the outcome of making a particular choice and can be calculated as the the probability multiplied by the severity of a given risk.
 
 
 | **Risk Value** | **Type of Risk** |
@@ -156,6 +180,11 @@ Therefor the resulting risk matrix is:
 |**Major**|Trivial|Tolerable|Moderate|Substantial|Extreme|
 |**Catastrophic**|Tolerable|Moderate|Substantial|Extreme|Intolerable|
 
+### Initial Risk Assessment
+The risks are broken down into two categories: Operational Risks and Objective Risks. These are represented by their Risk ID's: 1.X are Operational Risks and 2.X are Objective Risks.
+The risk assessment is also broken into two categories: Risk Analysis and Risk Management.
+The Risk Analysis categories are: Risk ID, Description, Likelihood, Impact, Consequence and Response Strategy.
+The Risk Management categories are: Response Strategy.
 
 
 |Risk ID|Description|Likelihood|Impact|Risk|Consequence|Response Strategy|
@@ -167,9 +196,21 @@ Therefor the resulting risk matrix is:
 |2.2|Lack of content knowledge|Possible|Major|Substantial|A lack of understanding of the content covered in the academy will mean that I am unable to fulfill requirements needed for the project|I will first search the internet fo the answers to any questions I have, then seek peer help if I cannot find the answer, before finally approaching my trainer|
 |2.3|Jenkins pipeline error|Unlikely|Minor|Trivial|A problem with Jenkins compatibility with the GitHub webhooks would mean that the pipeline would not automatically run for every push to GitHub, compromising the autonomy of the continuous integration|If not able to be resolved by the deadline, then manual build requests in Jenkins can be used.|
 
+### Ongoing Risk Assessment
+How I added/removed/edited risks as the project progressed
+
+### Final Risk Assessment
+The resulting risk assessment
+
+## Project Architecture
+Detail how the backend processes work, from visual code to github to jenkins etc.
+Also detail how the code works front end for the user stories
+Wireframes for application/architecture diagram for servers
+
+Show functionality of servers 1,2,3 and 4.
 
 ## Testing
-I used a unit and integration testing method as a measure of my code quality for the application.
+I used a unit, integration and acceptance testing method as a measure of my code quality for the application.
 
 ### Unit Testing
 Unit testing is where individual units/ components of a software are tested. The purpose is to validate that each unit of the software performs as designed. A unit usually has one or a few inputs and usually a single output. It is the smallest testable part of any software, hence why I ran a URL and DB pytest to test each CRUD function and URL link.
@@ -180,8 +221,19 @@ Integration testing is where individual units are combined and tested as a group
 ### Acceptance Testing
 Also known as operational readiness testing, this refers to the checking done to a system to ensure that processes and procedures are in place to allow the system to be used and maintained. This may include checks done to back-up facilities, procedures for disaster recovery, training for end users, maintenance procedures, and security procedures.
 Selenium is a portable framework for testing web applications (front-end). Selenium provides a playback tool for authoring functional tests without the need to learn a test scripting language (Selenium IDE). It also provides a test domain-specific language (Selenese) to write tests in a number of popular programming languages, including C#, Groovy, Java, Perl, PHP, Python, Ruby and Scala. The tests can then run against most modern web browsers. Selenium runs on Windows, Linux, and macOS. It is open-source software released under the Apache License 2.0.
+SonarQube is an open-source platform for continuous inspection of code quality to perform automatic reviews with static analysis of code to detect bugs, code smells, and security vulnerabilities. It offers reports on duplicated code, coding standards, unit tests, code coverage, code complexity, comments, bugs, and security vulnerabilities. SonarQube can also record metrics history and provides evolution graphs as well as providing fully automated analysis and integration with CI integration tools such as Jenkins.
+Whilst Selenium is for front-end testing, SonarQube is for back-end testing.
 
-## Improvements for the future <a name="improvements_for_the_future"></a>
+### Influence
+How the testing results influenced the application.
+How I refactored the code based on the results.
+
+## Retrospective 
+### What went well <a name="what_went_well"></a>
+
+### What didn't go well <a name="what_didn't_go_well"></a>
+
+### Improvements for the future <a name="improvements_for_the_future"></a>
 If I had more time dedicated to this project I would have implemented the following:
 + **Increased testing coverage:**
 As shown previous in the coverage report section of the readme file, there was little coverage of the application, even though a lot of its core features where tested. This is definitely an area i would like to improve in later projects.
