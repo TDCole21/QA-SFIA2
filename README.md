@@ -126,12 +126,13 @@ For this project I used a feature branch model that has three tiers:
 A diagram of this model is shown below:
 ![Feature branch model.](https://i.imgur.com/hYX8eGv.png)
 |Node|Description|
-A: Initial production version
-B: Initial developer version
-C,G,E,I: Feature branch, server #1,#2,#3 and #4 completed respectively and pushed to developer branch
-D,F,H: Next production release pushed up from developer branch
-J: Final production release
-K: Ongoing Devloper branch
+|:---:|:---:|
+|A|Initial production version|
+|B|Initial developer version|
+|C,G,E,I|Feature branch, server #1,#2,#3 and #4 completed respectively and pushed to developer branch|
+|D,F,H|Next production release pushed up from developer branch|
+|J|Final production release|
+|K|Ongoing Developer branch|
 
 ## Risk Assessment <a name="risk_assessment"></a>
 A risk assessment determines possible mishaps, their likelihood and consequences, and the tolerances for such events. It is a combined effort of identifying and analysing potential (future) events that may negatively impact the project and making judgments on the tolerability of the risk on the basis of a risk analysis while considering influencing factors.
