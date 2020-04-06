@@ -7,7 +7,7 @@ This is a project, worked on independently of others, in reference to the QA Lea
 
 ## Contents
 1. [Brief](#brief)
-    1. [MVP](#mvp)
+    1. [Minimal Viable Product (MVP)](#mvp)
     2. [Tech Stack Requirements](#tech_stack)
     3. [Project Architecture](#project_architecture)
         1. [Service #1](#service1_architecture)
@@ -16,16 +16,14 @@ This is a project, worked on independently of others, in reference to the QA Lea
 2. [Project Management](#project_management)
     1. [Agile Methodology](#agile)
     2. [Kanban Board](#kanban_board)
-        1. [Initial Plan](#first_kanban_board)
+        1. [First Sprint](#sprint1)
 4. [Risk Assessment](#risk_assessment)
 5. [Improvements for the Future](#improvements_for_the_future)
 6. [Authors](#authors)
 7. [Acknowledgements](#acknowledgements)
 
 ## Brief <a name="brief"></a>
-This section of the document will serve as the introduction for the requirements of the project.
-
-The purpose of this project is to create an application that involves the concepts learnt from previous training modules; more specifically, this will involve:
+The purpose of this project is to create an application that involves the concepts that build on from the SFIA Fundamental Project; more specifically, this will involve:
 + Software Development with Python
 + Continuous Integration (CI)
 + Cloud Fundamentals
@@ -36,9 +34,9 @@ The resulting aim of the project is to create an application that generates "Obj
 The Minimum Viable Product (MVP) for the project has the following requirements:
 + A Kanban board with full expansion on user stories, use cases and tasks needed to complete the project.
 + An Application fully integrated using the Feature-Branch model into a Version Control System which will subsequently be built through a CI server and deployed to a cloud-based virtual machine. 
-+ The project must follow the Micro Services architecture that has been asked for. 
++ The project must follow the Micro Services architecture as per the requirements. 
 + The project must be deployed using containerisation and an orchestration tool.
-+ As part of the project you need to create an Ansible Playbook that will provision the environment that your application needs to run.
++ Create an Ansible Playbook that will provision the environment that the application needs to run.
 
 ### Tech Stack Requirements <a name="tech_stack"></a>
 The Tech Stack requirements are the following:
@@ -62,18 +60,16 @@ The Tech Stack requirements are the following:
 |Front-end|Flask (including Jinja2) and HTML (including CSS and Bootstrap)|
 
 ### Project Architecture <a name="project_architecture"></a>
-You are required to create a micro-service orientated architecture for your application, this application must be composed of at least 4 services that work together.
-For services #2, #3 and #4 you need to create 2 different implementations, you must be able to demonstrate swapping these implementations out for each other seamlessly, without disrupting the user experience. 
+The application must use a micro-service orientated architecture composed of at least 4 services that work together. Services #2, #3 and #4 each need to create 2 different implementations, and must be able to demonstrate swapping these implementations out for each other seamlessly, without disrupting the user experience. 
 
 #### Service #1 <a name="service1_architecture"></a>
-The core service – this will render the Jinja2 templates you need to interact with your application, it will also be responsible for communicating with the other 3 services, and finally for persisting some data in an SQL database.
+Service #1 will act as the core service. Service 1 will render the Jinja2 templates needed to interact with the application, it will also be responsible for communicating with the other 3 services, and finally for persisting some data in an SQL database.
 
 #### Service #2 and #3 <a name="service2&3_architecture"></a>
-These will both generate a random “Object”, this object can be whatever you like as we encourage creativity in this project. You can create the “Object” however you like, some methods will be more complex but therefore
-show a greater technical understanding and flexibility.
+Services #2 and #3 will both generate a random “Object”.
 
 #### Service #4 <a name="service4_architecture"></a>
-This service will also create an “Object” however this “Object” must be based upon the results of service #2 + #3 using some pre-defined rules. Please see below for an example of how this logic can look. The complexity of your logic here is up to you, again a simple implementation is allowed, however may not showcase your full understanding of the technology.
+Service #4 will also create an “Object” however this “Object” must be based upon the results of service #2 and #3 using some pre-defined rules.
 
 ## Project Management <a name="project_management"></a>
 This section will detail the project management tools and techniques used to plan the project, and how they were utilised and adapted throughout the project.
@@ -100,11 +96,11 @@ The board is designed around user stories to test the CRUD functionalities of th
 I defined "done" as to mean that the feature had been successfully implemented into the application, and had no negative effect on the pytest application which is detailed later.
 Any implemented feature that negatively effected the performance of the application were logged into the bugs column.
 
-#### Initial Plan <a name="first_kanban_board"></a>
+#### First Sprint <a name="sprint1"></a>
 To include the initial kanban board and an updated board per completed sprint.
 
 
-
+## Feature Branch Model <a name="feature_branch"></a>
 
 ## Risk Assessment <a name="risk_assessment"></a>
 The Risk Analysis categories are: Risk ID, Description, Likelihood, Impact, Consequence and Response Strategy.
@@ -133,11 +129,11 @@ Risk is the lack of certainty about the outcome of making a particular choice an
 
 | **Risk Value** | **Type of Risk** |
 |---|---|
-| <5 | Trivial |
-| <10 | Tolerable |
-| <15 | Moderate |
-| <20 | Substantial |
-| <25 | Extreme |
+| 0-4 | Trivial |
+| 5-9 | Tolerable |
+| 10-14 | Moderate |
+| 15-19 | Substantial |
+| 20-24 | Extreme |
 | 25+ | Intolerable |
 
 Therefor the resulting risk matrix is:
@@ -158,3 +154,33 @@ Therefor the resulting risk matrix is:
 |2.1|Time mismanagement|Possible|Major|Moderate|Falling behind on tasks means rushing on certain aspects of the project and can result in a lower quality of work.|Using methods such as a Trello board and gantt chart to track my progress and ensure I don't fall behind on my work. If my work starts to fall behind, I can work on my project before/after training hours. |
 |2.2|Lack of content knowledge|Possible|Major|Substantial|A lack of understanding of the content covered in the academy will mean that I am unable to fulfill requirements needed for the project|I will first search the internet fo the answers to any questions I have, then seek peer help if I cannot find the answer, before finally approaching my trainer|
 |2.3|Jenkins pipeline error|Unlikely|Minor|Trivial|A problem with Jenkins compatibility with the GitHub webhooks would mean that the pipeline would not automatically run for every push to GitHub, compromising the autonomy of the continuous integration|If not able to be resolved by the deadline, then manual build requests in Jenkins can be used.|
+
+## Testing
+I used a unit and integration testing method as a measure of my code quality for the application.
+
+### Unit Testing
+Unit testing is where individual units/ components of a software are tested. The purpose is to validate that each unit of the software performs as designed. A unit usually has one or a few inputs and usually a single output. It is the smallest testable part of any software, hence why I ran a URL and DB pytest to test each CRUD function and URL link.
+
+### Integration Testing
+Integration testing is where individual units are combined and tested as a group. The purpose of this level of testing is to expose faults in the interaction between integrated units. Coverage reports is a type of integration testing, and a target of +45% is acceptable and 80+% is desired. Add discussion for more marks.
+
+### Acceptance Testing
+Also known as operational readiness testing, this refers to the checking done to a system to ensure that processes and procedures are in place to allow the system to be used and maintained. This may include checks done to back-up facilities, procedures for disaster recovery, training for end users, maintenance procedures, and security procedures.
+Selenium is a portable framework for testing web applications (front-end). Selenium provides a playback tool for authoring functional tests without the need to learn a test scripting language (Selenium IDE). It also provides a test domain-specific language (Selenese) to write tests in a number of popular programming languages, including C#, Groovy, Java, Perl, PHP, Python, Ruby and Scala. The tests can then run against most modern web browsers. Selenium runs on Windows, Linux, and macOS. It is open-source software released under the Apache License 2.0.
+
+## Improvements for the future <a name="improvements_for_the_future"></a>
+If I had more time dedicated to this project I would have implemented the following:
++ **Increased testing coverage:**
+As shown previous in the coverage report section of the readme file, there was little coverage of the application, even though a lot of its core features where tested. This is definitely an area i would like to improve in later projects.
++ **Improved UI:**
+Due to the nature of Agile, I prioritised working CRUD functionality over the documentation and presentation of the project. This meant I did not spend time on the design aspects of the site.
++ **Selenium testing:**
+My testing protocol only included unit and integration testing. Had more time been allowed, I would have researched and implemented further methods of testing.
++ **Complex version control branch model:**
+I only used two branches in my project; a master branch and developer branch. To help prepare better for best practice in industry, I would have further branches underneath the developer branch for each product backlog then further branches for the sprint backlogs and then again for the tasks.
+
+## Authors <a name="authors"></a>
+Thomas Cole - QA Academy Trainee
+
+## Acknowledgements <a name="acknowledgements"></a>
+I would like to acknowledge the QA trainers and other members of my cohort, who were able to help me with any problems I had with my project.
