@@ -125,6 +125,7 @@ For this project I used a feature branch model that has three tiers:
 + Feature Branches, these branches are where the edits are made and then merged with the developer branch.
 A diagram of this model is shown below:
 ![Feature branch model.](https://i.imgur.com/hYX8eGv.png)
+
 |Node|Description|
 |:---:|:---:|
 |A|Initial production version|
