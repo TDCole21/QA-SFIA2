@@ -40,7 +40,7 @@ The Minimum Viable Product (MVP) for the project has the following requirements:
 
 ### Tech Stack Requirements <a name="tech_stack"></a>
 The Tech Stack requirements are the following:
-<center>
+
 |Technology Required|Used in this project|
 |:---:|:---:|
 |Kanban Board|Trello|
@@ -50,9 +50,9 @@ The Tech Stack requirements are the following:
 |Containerisation|Docker|
 |Configuration Management|Ansible|
 |Orchestration Tool|Docker Swarm|
-</center>
 
-<center>
+
+
 |Additional Technology|Used in this project|
 |:---:|:---:|
 |Database|Google Cloud Platform (GCP) SQL Server|
@@ -61,7 +61,7 @@ The Tech Stack requirements are the following:
 |Integration Testing with Python|Coverage|
 |Acceptance Testing with Python|Selenium|
 |Front-end|Flask (including Jinja2) and HTML (including CSS and Bootstrap)|
-</center>
+
 
 ### Project Architecture <a name="project_architecture"></a>
 The application must use a micro-service orientated architecture composed of at least 4 services that work together. Services #2, #3 and #4 each need to create 2 different implementations, and must be able to demonstrate swapping these implementations out for each other seamlessly, without disrupting the user experience. 
@@ -111,7 +111,7 @@ The Risk Analysis categories are: Risk ID, Description, Likelihood, Impact, Cons
 The Risk Management categories are: Response Strategy.
 Risk IDs 1.X are Operational Risks and 2.X are Objective Risks.
 
-<center>
+
 | **Probability/Likelihood Value** | **Chance of occurring during the course of the project** |
 |:---:|:---:|
 | **1** | Rare (1% to 20%) |
@@ -119,9 +119,9 @@ Risk IDs 1.X are Operational Risks and 2.X are Objective Risks.
 | **3** | Possible (41% to 60%) |
 | **4** | Likely (61% to 80%) |
 | **5** | Certain (81% to 100%) |
-</center>
 
-<center>
+
+
 | **Severity/Impacts Value** | **Negative effect on the project** |
 |:---:|:---:|
 | **1** | Minimal |
@@ -129,13 +129,13 @@ Risk IDs 1.X are Operational Risks and 2.X are Objective Risks.
 | **3** | Moderate |
 | **4** | Major |
 | **5** | Catastrophic |
-</center>
+
 
 Risk Assessment Matrix
 A risk matrix is a matrix that is used during risk assessment to define the level of risk by considering the category of probability or likelihood against the category of consequence severity. This is a simple mechanism to increase visibility of risks and assist management decision making.
 Risk is the lack of certainty about the outcome of making a particular choice and can be calculated as the the probability multiplied by the severity of a given risk.
 
-<center>
+
 | **Risk Value** | **Type of Risk** |
 |:---:|:---:|
 | 0-4 | Trivial |
@@ -144,10 +144,10 @@ Risk is the lack of certainty about the outcome of making a particular choice an
 | 15-19 | Substantial |
 | 20-24 | Extreme |
 | 25+ | Intolerable |
-</center>
+
 
 Therefor the resulting risk matrix is:
-<center>
+
 |**Likelihood →** <br> **Impact ↓**|**Rare**|**Unlikely**|**Possible**|**Likely**|**Certain**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Minimal**|Trivial|Trivial|Trivial|Trivial|Tolerable|
@@ -155,9 +155,9 @@ Therefor the resulting risk matrix is:
 |**Moderate**|Trivial|Tolerable|Tolerable|Moderate|Substantial|
 |**Major**|Trivial|Tolerable|Moderate|Substantial|Extreme|
 |**Catastrophic**|Tolerable|Moderate|Substantial|Extreme|Intolerable|
-</center>
 
-<center>
+
+
 |Risk ID|Description|Likelihood|Impact|Risk|Consequence|Response Strategy|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1.1|Data compromised|Unlikely|Major|Tolerable|Potential loss of large sections of the project, resulting in setbacks|Using the branch feature in git, and ensuring a frequently updated branch method|
@@ -166,7 +166,7 @@ Therefor the resulting risk matrix is:
 |2.1|Time mismanagement|Possible|Major|Moderate|Falling behind on tasks means rushing on certain aspects of the project and can result in a lower quality of work.|Using methods such as a Trello board and gantt chart to track my progress and ensure I don't fall behind on my work. If my work starts to fall behind, I can work on my project before/after training hours. |
 |2.2|Lack of content knowledge|Possible|Major|Substantial|A lack of understanding of the content covered in the academy will mean that I am unable to fulfill requirements needed for the project|I will first search the internet fo the answers to any questions I have, then seek peer help if I cannot find the answer, before finally approaching my trainer|
 |2.3|Jenkins pipeline error|Unlikely|Minor|Trivial|A problem with Jenkins compatibility with the GitHub webhooks would mean that the pipeline would not automatically run for every push to GitHub, compromising the autonomy of the continuous integration|If not able to be resolved by the deadline, then manual build requests in Jenkins can be used.|
-</center>
+
 
 ## Testing
 I used a unit and integration testing method as a measure of my code quality for the application.
