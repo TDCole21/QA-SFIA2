@@ -1,5 +1,5 @@
 # Skills Framework for the Information Age (SFIA) - Project 2
----
+:---:
 # TBA
 
 This is a project, worked on independently of others, in reference to the QA Learning Academy training base project specification; Practical Project Specification - DevOps Core. The purpose of this project is to fulfill the specification defined for the assignment due Tuesday 14th April 2020, 09:00.
@@ -41,7 +41,7 @@ The Minimum Viable Product (MVP) for the project has the following requirements:
 ### Tech Stack Requirements <a name="tech_stack"></a>
 The Tech Stack requirements are the following:
 |Technology Required|Used in this project|
-|---|---|
+|:---:|:---:|
 |Kanban Board|Trello|
 |Version Control System (VCS)|Git|
 |CI Server|Jenkins|
@@ -51,7 +51,7 @@ The Tech Stack requirements are the following:
 |Orchestration Tool|Docker Swarm|
 
 |Additional Technology|Used in this project|
-|---|---|
+|:---:|:---:|
 |Database|Google Cloud Platform (GCP) SQL Server|
 |Programming language|Python (including MySQL)|
 |Unit Testing with Python|Pytest|
@@ -108,7 +108,7 @@ The Risk Management categories are: Response Strategy.
 Risk IDs 1.X are Operational Risks and 2.X are Objective Risks.
 
 | **Probability/Likelihood Value** | **Chance of occurring during the course of the project** |
-|---|---|
+|:---:|:---:|
 | **1** | Rare (1% to 20%) |
 | **2** | Unlikely (21% to 40%) |
 | **3** | Possible (41% to 60%) |
@@ -116,7 +116,7 @@ Risk IDs 1.X are Operational Risks and 2.X are Objective Risks.
 | **5** | Certain (81% to 100%) |
 
 | **Severity/Impacts Value** | **Negative effect on the project** |
-|---|---|
+|:---:|:---:|
 | **1** | Minimal |
 | **2** | Minor |
 | **3** | Moderate |
@@ -128,7 +128,7 @@ A risk matrix is a matrix that is used during risk assessment to define the leve
 Risk is the lack of certainty about the outcome of making a particular choice and can be calculated as the the probability multiplied by the severity of a given risk.
 
 | **Risk Value** | **Type of Risk** |
-|---|---|
+|:---:|:---:|
 | 0-4 | Trivial |
 | 5-9 | Tolerable |
 | 10-14 | Moderate |
@@ -138,7 +138,7 @@ Risk is the lack of certainty about the outcome of making a particular choice an
 
 Therefor the resulting risk matrix is:
 |**Likelihood →** <br> **Impact ↓**|**Rare**|**Unlikely**|**Possible**|**Likely**|**Certain**|
-|---|---|---|---|---|---|
+|:---:|:---:|:---:|:---:|:---:|:---:|
 |**Minimal**|Trivial|Trivial|Trivial|Trivial|Tolerable|
 |**Minor**|Trivial|Trivial|Tolerable|Tolerable|Moderate|
 |**Moderate**|Trivial|Tolerable|Tolerable|Moderate|Substantial|
@@ -147,7 +147,7 @@ Therefor the resulting risk matrix is:
 
 
 |Risk ID|Description|Likelihood|Impact|Risk|Consequence|Response Strategy|
-|---|---|---|---|---|---|---|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1.1|Data compromised|Unlikely|Major|Tolerable|Potential loss of large sections of the project, resulting in setbacks|Using the branch feature in git, and ensuring a frequently updated branch method|
 |1.2|GCP (Google Cloud Processing) budget limit exceeded|Rare|Minimal|Trivial|Personal financial cost, whilst minimal setback to project progress|Google provides $300 initial budget for all users, and disables the autopayment if the allowance runs out. To prevent this from becoming a problem, I have to ensure that feature doesn't become enabled, and to keep an eye on my remaining budget.|
 |1.3|Internet Connectivity Problems|Likely|Major|Substantial|A lot of the work for this project is done on virtual machines and requires a constant internet connection. Missing this would require large periods of time without being able to work on or update the project|There is some work that can be drafted offline before being pushed up to the cloud. If the problem seriously effects the work, then let the trainer know, such that it can be taken into consideration|
