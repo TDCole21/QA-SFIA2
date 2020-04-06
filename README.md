@@ -1,5 +1,5 @@
 # Skills Framework for the Information Age (SFIA) - Project 2
-:---:
+---
 # TBA
 
 This is a project, worked on independently of others, in reference to the QA Learning Academy training base project specification; Practical Project Specification - DevOps Core. The purpose of this project is to fulfill the specification defined for the assignment due Tuesday 14th April 2020, 09:00.
@@ -17,8 +17,29 @@ This is a project, worked on independently of others, in reference to the QA Lea
     1. [Agile Methodology](#agile)
     2. [Kanban Board](#kanban_board)
         1. [First Sprint](#sprint1)
+        2. [Nth Sprint](#sprintn)
+        3. [Final Sprint](#final_sprint)
+        4. [Future Sprint](#future_sprint)
+3. [Feature Branch Model](#feature_branch)
 4. [Risk Assessment](#risk_assessment)
-5. [Improvements for the Future](#improvements_for_the_future)
+    1. [Risk Assessment Matrix](#risk_matrix)
+        1. [Likelihood Table](#likelihood_table)
+        2. [Impact Table](#impact_table)
+        3. [Risk Table](#risk_table)
+        4. [Resulting Risk Matrix](#resulting_risk_matrix)
+    2. [Initial Risk Assessment](#initial_risk_assessment)
+    3. [Ongoing Risk Assessment](#ongoing_risk_assessment)
+    4. [Final Risk Assessment](#final_risk_assessment)
+5. [Project Architecture](#project_architecture)
+6. [Testing](#testing)
+    1. [Unit Testing](#unit_testing)
+    2. [Integration Testing](#integration_testing)
+    3. [Acceptance Testing](#acceptance_testing)
+    4. [Testing Influence](#testing_influence)
+7. [Retrospective](#retrospective)
+    1. [What Went Well](#what_went_well)
+    2. [What Didn't Go Well](#what_didn't_go_well)
+    3. [Improvements for the Future](#improvements_for_the_future)
 6. [Authors](#authors)
 7. [Acknowledgements](#acknowledgements)
 
@@ -108,13 +129,13 @@ I defined "done" as to mean that the feature had been successfully implemented i
 #### First Sprint <a name="sprint1"></a>
 To include the initial kanban board.
 
-#### Nth Sprint <a name="sprint1"></a>
+#### Nth Sprint <a name="sprintn"></a>
 To include the nth kanban board.
 
-#### Final Sprint <a name="sprint1"></a>
+#### Final Sprint <a name="final_sprint"></a>
 To include the final kanban board.
 
-#### Future Sprint <a name="sprint1"></a>
+#### Future Sprint <a name="future_sprint"></a>
 To include the a kanban board that details how I would implement future improvements.
 
 
@@ -142,7 +163,7 @@ A risk assessment determines possible mishaps, their likelihood and consequences
 A risk matrix is a matrix that is used during risk assessment to define the level of risk by considering the category of probability or likelihood against the category of consequence severity. This is a simple mechanism to increase visibility of risks and assist management decision making.
 Risk is the lack of certainty about the outcome of making a particular choice and can be calculated as the the probability multiplied by the severity of a given risk.
 
-#### Likelihood Table
+#### Likelihood Table <a name="likelihood_table"></a>
 | **Probability/Likelihood Value** | **Chance of occurring during the course of the project** |
 |:---:|:---:|
 | **1** | Rare (1% to 20%) |
@@ -152,7 +173,7 @@ Risk is the lack of certainty about the outcome of making a particular choice an
 | **5** | Certain (81% to 100%) |
 
 
-#### Impact Table
+#### Impact Table <a name="impact_table"></a>
 | **Severity/Impacts Value** | **Negative effect on the project** |
 |:---:|:---:|
 | **1** | Minimal |
@@ -162,7 +183,7 @@ Risk is the lack of certainty about the outcome of making a particular choice an
 | **5** | Catastrophic |
 
 
-#### Risk Table
+#### Risk Table <a name="risk_table"></a>
 | **Risk Value** | **Type of Risk** |
 |:---:|:---:|
 | 0-4 | Trivial |
@@ -173,7 +194,7 @@ Risk is the lack of certainty about the outcome of making a particular choice an
 | 25+ | Intolerable |
 
 
-#### Resulting Risk Matrix
+#### Resulting Risk Matrix <a name="resulting_risk_matrix"></a>
 |**Likelihood →** <br> **Impact ↓**|**Rare**|**Unlikely**|**Possible**|**Likely**|**Certain**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Minimal**|Trivial|Trivial|Trivial|Trivial|Tolerable|
@@ -182,7 +203,7 @@ Risk is the lack of certainty about the outcome of making a particular choice an
 |**Major**|Trivial|Tolerable|Moderate|Substantial|Extreme|
 |**Catastrophic**|Tolerable|Moderate|Substantial|Extreme|Intolerable|
 
-### Initial Risk Assessment
+### Initial Risk Assessment <a name="initial_risk_matrix"></a>
 The risks are broken down into two categories: Operational Risks and Objective Risks. These are represented by their Risk ID's: 1.X are Operational Risks and 2.X are Objective Risks.
 The risk assessment is also broken into two categories: Risk Analysis and Risk Management.
 The Risk Analysis categories are: Risk ID, Description, Likelihood, Impact, Consequence and Response Strategy.
@@ -198,39 +219,39 @@ The Risk Management categories are: Response Strategy.
 |2.2|Lack of content knowledge|Possible|Major|Substantial|A lack of understanding of the content covered in the academy will mean that I am unable to fulfill requirements needed for the project|I will first search the internet fo the answers to any questions I have, then seek peer help if I cannot find the answer, before finally approaching my trainer|
 |2.3|Jenkins pipeline error|Unlikely|Minor|Trivial|A problem with Jenkins compatibility with the GitHub webhooks would mean that the pipeline would not automatically run for every push to GitHub, compromising the autonomy of the continuous integration|If not able to be resolved by the deadline, then manual build requests in Jenkins can be used.|
 
-### Ongoing Risk Assessment
+### Ongoing Risk Assessment <a name="ongoing_risk_matrix"></a>
 How I added/removed/edited risks as the project progressed
 
-### Final Risk Assessment
+### Final Risk Assessment <a name="final_risk_matrix"></a>
 The resulting risk assessment
 
-## Project Architecture
+## Project Architecture <a name="project_architecture"></a>
 Detail how the backend processes work, from visual code to github to jenkins etc.
 Also detail how the code works front end for the user stories
 Wireframes for application/architecture diagram for servers
 
 Show functionality of servers 1,2,3 and 4.
 
-## Testing
+## Testing <a name="testing"></a>
 I used a unit, integration and acceptance testing method as a measure of my code quality for the application.
 
-### Unit Testing
+### Unit Testing <a name="unit_testing"></a>
 Unit testing is where individual units/ components of a software are tested. The purpose is to validate that each unit of the software performs as designed. A unit usually has one or a few inputs and usually a single output. It is the smallest testable part of any software, hence why I ran a URL and DB pytest to test each CRUD function and URL link.
 
-### Integration Testing
+### Integration Testing <a name="integration_testing"></a>
 Integration testing is where individual units are combined and tested as a group. The purpose of this level of testing is to expose faults in the interaction between integrated units. Coverage reports is a type of integration testing, and a target of +45% is acceptable and 80+% is desired. Add discussion for more marks.
 
-### Acceptance Testing
+### Acceptance Testing <a name="acceptance_testing"></a>
 Also known as operational readiness testing, this refers to the checking done to a system to ensure that processes and procedures are in place to allow the system to be used and maintained. This may include checks done to back-up facilities, procedures for disaster recovery, training for end users, maintenance procedures, and security procedures.
 Selenium is a portable framework for testing web applications (front-end). Selenium provides a playback tool for authoring functional tests without the need to learn a test scripting language (Selenium IDE). It also provides a test domain-specific language (Selenese) to write tests in a number of popular programming languages, including C#, Groovy, Java, Perl, PHP, Python, Ruby and Scala. The tests can then run against most modern web browsers. Selenium runs on Windows, Linux, and macOS. It is open-source software released under the Apache License 2.0.
 SonarQube is an open-source platform for continuous inspection of code quality to perform automatic reviews with static analysis of code to detect bugs, code smells, and security vulnerabilities. It offers reports on duplicated code, coding standards, unit tests, code coverage, code complexity, comments, bugs, and security vulnerabilities. SonarQube can also record metrics history and provides evolution graphs as well as providing fully automated analysis and integration with CI integration tools such as Jenkins.
 Whilst Selenium is for front-end testing, SonarQube is for back-end testing.
 
-### Influence
+### Influence <a name="testing_influence"></a>
 How the testing results influenced the application.
 How I refactored the code based on the results.
 
-## Retrospective 
+## Retrospective  <a name="retrospective"></a>
 ### What went well <a name="what_went_well"></a>
 
 ### What didn't go well <a name="what_didn't_go_well"></a>
