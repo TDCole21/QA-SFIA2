@@ -142,6 +142,7 @@ A risk assessment determines possible mishaps, their likelihood and consequences
 A risk matrix is a matrix that is used during risk assessment to define the level of risk by considering the category of probability or likelihood against the category of consequence severity. This is a simple mechanism to increase visibility of risks and assist management decision making.
 Risk is the lack of certainty about the outcome of making a particular choice and can be calculated as the the probability multiplied by the severity of a given risk.
 
+#### Likelihood Table
 | **Probability/Likelihood Value** | **Chance of occurring during the course of the project** |
 |:---:|:---:|
 | **1** | Rare (1% to 20%) |
@@ -151,7 +152,7 @@ Risk is the lack of certainty about the outcome of making a particular choice an
 | **5** | Certain (81% to 100%) |
 
 
-
+#### Impact Table
 | **Severity/Impacts Value** | **Negative effect on the project** |
 |:---:|:---:|
 | **1** | Minimal |
@@ -161,7 +162,7 @@ Risk is the lack of certainty about the outcome of making a particular choice an
 | **5** | Catastrophic |
 
 
-
+#### Risk Table
 | **Risk Value** | **Type of Risk** |
 |:---:|:---:|
 | 0-4 | Trivial |
@@ -172,8 +173,7 @@ Risk is the lack of certainty about the outcome of making a particular choice an
 | 25+ | Intolerable |
 
 
-Therefor the resulting risk matrix is:
-
+#### Resulting Risk Matrix
 |**Likelihood →** <br> **Impact ↓**|**Rare**|**Unlikely**|**Possible**|**Likely**|**Certain**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Minimal**|Trivial|Trivial|Trivial|Trivial|Tolerable|
