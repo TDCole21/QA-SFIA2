@@ -142,7 +142,6 @@ I used the MoSCow Prioritisation Method on the Kanban Board with the following k
 I defined "done" as to mean that the feature had been successfully implemented into the application, and had no negative effect on the testing features. If a feature negatively impacted the test results, they were logged into the bugs column.
 
 #### First Sprint <a name="sprint1"></a>
-To include the initial kanban board.
 ![Initial Kanban Board](https://i.imgur.com/JEitCVN.png)
 
 #### Nth Sprint <a name="sprintn"></a>
