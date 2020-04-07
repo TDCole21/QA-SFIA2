@@ -1,6 +1,6 @@
 # Skills Framework for the Information Age (SFIA) - Project 2
 ---
-# TBA
+# Generate your own Superhero name! 
 
 This is a project, worked on independently of others, in reference to the QA Learning Academy training base project specification; Practical Project Specification - DevOps Core. The purpose of this project is to fulfill the specification defined for the assignment due Tuesday 14th April 2020, 09:00.
 
@@ -15,7 +15,8 @@ This is a project, worked on independently of others, in reference to the QA Lea
         3. [Service #4](#service4_architecture)
 2. [Project Management](#project_management)
     1. [Agile Methodology](#agile)
-    2. [Kanban Board](#kanban_board)
+    2. [My Proposal](#my_proposal)
+    3. [Kanban Board](#kanban_board)
         1. [First Sprint](#sprint1)
         2. [Nth Sprint](#sprintn)
         3. [Final Sprint](#final_sprint)
@@ -35,6 +36,7 @@ This is a project, worked on independently of others, in reference to the QA Lea
     2. [Use Case Diagram/ User Stories](#use_case_diagram)
     3. [Service Architecture Diagram](#service_architecture_diagram)
     4. [Entity Relationship Diagrams (ERD)](#entity_relationship_diagrams)
+    5. [Security](#project_security)
 6. [Testing](#testing)
     1. [Unit Testing](#unit_testing)
     2. [Integration Testing](#integration_testing)
@@ -44,8 +46,9 @@ This is a project, worked on independently of others, in reference to the QA Lea
     1. [What Went Well](#what_went_well)
     2. [What Didn't Go Well](#what_didn't_go_well)
     3. [Improvements for the Future](#improvements_for_the_future)
-6. [Authors](#authors)
-7. [Acknowledgements](#acknowledgements)
+6. [Installation Guide](#installation)
+7. [Authors](#authors)
+8. [Acknowledgements](#acknowledgements)
 
 ## Brief <a name="brief"></a>
 The purpose of this project is to create an application that involves the concepts that build on from the SFIA Fundamental Project; more specifically, this will involve:
@@ -117,6 +120,11 @@ The application would have no users or customers. So, I acted as the users and t
 + **Responding to Change over following a plan:**
 All my project management allowed additional time for change.
 
+### My Proposal <a name="my_proposal"></a>
+My proposal for the solution to this project is to create a "Generate your own Superhero name" website. I took inspiration from popular quizzes on sites such as Buzzfeed. Users would be able to generate either random Superhero names for themselves, or be able to personalise the name based on a variety of user defined inputs, such as: type of superpower, their own name and good or evil.
+
+Service #1 would serve as the user interface server and would provide the application with the user inputs and output the name back to the user. Services #2 and #3 would generate the names and Service #4 would store this information onto a file or equivalent (CSV or MySQL).
+
 ### Kanban Board <a name="kanban_board"></a>
 As stated for the MVP, I was required to follow best practices within industry and use a Kanban board to manage my project. I chose to use the Trello application to create my Kanban board, due to my familiarity with the software, having seen it used at QA.
 
@@ -145,7 +153,11 @@ To include the final kanban board.
 
 #### Future Sprint <a name="future_sprint"></a>
 To include the a kanban board that details how I would implement future improvements.
+More detailed in retrospective.
 
+### Time Management <a name="time_management"></a>
+Include gantt chart
+Document every activity taken
 
 ## Feature Branch Model <a name="feature_branch"></a>
 For this project I used a feature branch model that has three tiers:
@@ -234,17 +246,33 @@ How I added/removed/edited risks as the project progressed
 The resulting risk assessment
 
 ## Project Architecture <a name="project_architecture"></a>
+### Tools <a name="project_tools"></a>
+Describe Docker/Dockerswarm, Jenkins and Ansible.
+Describe the files used and be able to answer questions; e.g: Docker is a container service that allows RAM+CPU to be distributed throughout the containers.
 ### Deployment <a name="project_deployment"></a>
 Detail how the backend processes work, from visual code to github to jenkins etc.
-### Use Case Diagram/ User Stories <a name="use_case_diagram"></a>
+Show evolution of diagram
+### Use Case Diagram <a name="use_case_diagram"></a>
 Also detail how the code works front end for the user stories
+Show evolution of diagram
+show that the application can save and read from a database csv or sql.
 ### Service Architecture Diagram <a name="service_architecture_diagram"></a>
-Wireframes for application/architecture diagram for servers
+Wireframes for application/architecture diagram for servers (front end)
 Show functionality of servers 1,2,3 and 4.
+Show evolution of diagram
+
+### Security <a name="project_security"></a>
+Detail the security used here and prove that it is secure.
+No exposed ports, showing that port 5000 isn't exposed on any of the containers.
+Port 80 reverse proxy into microservice1
+
+Firewall rule, only expose port 80 NGINX to the world
+
+Jenkins is exposed to the home and use NGINX.
 
 ### Entity Relationship Diagrams (ERD) <a name="entity_relationship_diagrams"></a>
 I used an ERD to help draft my database. I opted for the MoSCow Prioritisation Method, so focus on producing an MVP for the deadline.
-
+Not important
 
 ## Testing <a name="testing"></a>
 I used a unit, integration and acceptance testing method as a measure of my code quality for the application.
@@ -253,13 +281,12 @@ I used a unit, integration and acceptance testing method as a measure of my code
 Unit testing is where individual units/ components of a software are tested. The purpose is to validate that each unit of the software performs as designed. A unit usually has one or a few inputs and usually a single output. It is the smallest testable part of any software, hence why I ran a URL and DB pytest to test each CRUD function and URL link.
 
 ### Integration Testing <a name="integration_testing"></a>
-Integration testing is where individual units are combined and tested as a group. The purpose of this level of testing is to expose faults in the interaction between integrated units. Coverage reports is a type of integration testing, and a target of +45% is acceptable and 80+% is desired. Add discussion for more marks.
+Integration testing is where individual units are combined and tested as a group. The purpose of this level of testing is to expose faults in the interaction between integrated units. Coverage reports is a type of integration testing, and a target of +35% is adequate, 50%+ is acceptable and 80+% is desired. Add discussion for more marks.
 
 ### Acceptance Testing <a name="acceptance_testing"></a>
-Also known as operational readiness testing, this refers to the checking done to a system to ensure that processes and procedures are in place to allow the system to be used and maintained. This may include checks done to back-up facilities, procedures for disaster recovery, training for end users, maintenance procedures, and security procedures.
-Selenium is a portable framework for testing web applications (front-end). Selenium provides a playback tool for authoring functional tests without the need to learn a test scripting language (Selenium IDE). It also provides a test domain-specific language (Selenese) to write tests in a number of popular programming languages, including C#, Groovy, Java, Perl, PHP, Python, Ruby and Scala. The tests can then run against most modern web browsers. Selenium runs on Windows, Linux, and macOS. It is open-source software released under the Apache License 2.0.
-SonarQube is an open-source platform for continuous inspection of code quality to perform automatic reviews with static analysis of code to detect bugs, code smells, and security vulnerabilities. It offers reports on duplicated code, coding standards, unit tests, code coverage, code complexity, comments, bugs, and security vulnerabilities. SonarQube can also record metrics history and provides evolution graphs as well as providing fully automated analysis and integration with CI integration tools such as Jenkins.
-Whilst Selenium is for front-end testing, SonarQube is for back-end testing.
+Acceptance Testing, also known as operational readiness testing, refers to the checking done to a system to ensure that processes and procedures are in place to allow the system to be used and maintained. This includes checks done to back-up facilities, procedures for disaster recovery, training for end users, maintenance procedures, and security procedures.
++ Selenium is a portable framework for testing front-end web applications.
++ SonarQube is an open-source platform for continuous inspection of code quality to perform automatic reviews with static analysis of code to detect bugs, code smells, and security vulnerabilities. It offers reports on duplicated code, coding standards, unit tests, code coverage, code complexity, comments, bugs, and security vulnerabilities. SonarQube can also record metrics history and provides evolution graphs as well as providing fully automated analysis and integration with CI integration tools such as Jenkins.
 
 ### Influence <a name="testing_influence"></a>
 How the testing results influenced the application.
@@ -280,6 +307,12 @@ Due to the nature of Agile, I prioritised working CRUD functionality over the do
 My testing protocol only included unit and integration testing. Had more time been allowed, I would have researched and implemented further methods of testing.
 + **Complex version control branch model:**
 I only used two branches in my project; a master branch and developer branch. To help prepare better for best practice in industry, I would have further branches underneath the developer branch for each product backlog then further branches for the sprint backlogs and then again for the tasks.
+
+## Install Guide <a name="installation"></a>
+Provide support and advice to an initial user looking to use this application.
+Include how to deploy application, whilst keeping brief (use bullet points).
+Include steps like: git clone, install jenkins, etc.
+Be able to answer questions on this
 
 ## Authors <a name="authors"></a>
 Thomas Cole - QA Academy Trainee
