@@ -143,7 +143,7 @@ I defined "done" as to mean that the feature had been successfully implemented i
 
 #### First Sprint <a name="sprint1"></a>
 To include the initial kanban board.
-![Initial Kanban Board](https://i.imgur.com/YmGYZC2.png)
+![Initial Kanban Board](https://i.imgur.com/JEitCVN.png)
 
 #### Nth Sprint <a name="sprintn"></a>
 To include the nth kanban board.
