@@ -1,0 +1,54 @@
+version: "3.7"
+
+services:
+
+    service_1:
+        image: syed951/microservice_1
+        environment: 
+            - MYSQLHOST=${MYSQLHOST}
+            - MYSQLUSER=${MYSQLUSER}
+            - MYSQLPASSWORD=${MYSQLPASSWORD}
+            - MYSQLDB=${MYSQLDB}
+        networks:
+            - ingress
+        deploy:
+            replicas: 3
+
+    service_2:
+        image: syed951/microservice_2
+        networks:
+            - ingress
+        deploy:
+            replicas: 3
+
+    service_3:
+        image: syed951/microservice_3
+        networks:
+            - ingress
+        deploy:
+            replicas: 3
+
+    service_4:
+        image: syed951/microservice_4
+        networks:
+            - ingress
+        deploy:
+            replicas: 3
+
+    service_nginx:
+        image: syed951/microservice_nginx
+        ports:
+            - "80:80"
+        networks:
+            - ingress
+        depends_on:
+            - service_1
+            - service_2
+            - service_3
+            - service_4
+        deploy:
+            replicas: 3
+
+networks:
+    ingress:
+        driver: overlay
