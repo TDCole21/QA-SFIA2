@@ -1,9 +1,11 @@
 from application import app
-from flask import render_template, request
+from flask import Flask, request, render_template, url_for, redirect
+from flask_mysqldb import MySQL
 import requests
 import random
 import os
 
+mysql = MySQL(app)
 
 @app.route('/', methods=['GET'])
 def home():
