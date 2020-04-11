@@ -2,7 +2,7 @@ from application import app
 import requests
 
 
-@app.route('/randomword', methods=['GET'])
+@app.route('/randomword', methods=['GET', 'POST'])
 def sentence():
     beginning = requests.get('http://service_2:5001/randomphrase')
     ending = requests.get('http://service_3:5002/randomphrase')

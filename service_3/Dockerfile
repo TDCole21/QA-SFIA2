@@ -1,10 +1,10 @@
 FROM python:alpine3.11
 
-RUN mkdir /opt/service4/
+RUN mkdir /opt/service_3/
 
-COPY . /opt/service4/
+COPY . /opt/service_3/
 
-WORKDIR /opt/service4/
+WORKDIR /opt/service_3/
 
 RUN set -e; \
     apk add --no-cache --virtual .build-deps \

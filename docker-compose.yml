@@ -3,7 +3,7 @@ version: "3.7"
 services:
 
     service_1:
-        image: service1
+        image: tdcole/service_1:latest
         environment: 
             - MYSQL_HOST=${MYSQL_HOST}
             - MYSQL_USER=${MYSQL_USER}
@@ -15,28 +15,28 @@ services:
             replicas: 3
 
     service_2:
-        image: service2
+        image: tdcole/service_2:latest
         networks:
             - ingress
         deploy:
             replicas: 3
 
     service_3:
-        image: service3
+        image: tdcole/service_3:latest
         networks:
             - ingress
         deploy:
             replicas: 3
 
     service_4:
-        image: service4
+        image: tdcole/service_4:latest
         networks:
             - ingress
         deploy:
             replicas: 3
 
     service_nginx:
-        image: nginx
+        image: tdcole/nginx:latest
         ports:
             - "80:80"
         networks:
