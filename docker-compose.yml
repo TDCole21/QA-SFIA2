@@ -3,7 +3,7 @@ version: "3.7"
 services:
 
     service_1:
-        image: tdcole/service_1:latest
+        image: tdcole/sfia2:service_1
         environment: 
             - MYSQL_HOST=${MYSQL_HOST}
             - MYSQL_USER=${MYSQL_USER}
@@ -15,28 +15,28 @@ services:
             replicas: 3
 
     service_2:
-        image: tdcole/service_2:latest
+        image: tdcole/sfia2:service_2
         networks:
             - ingress
         deploy:
             replicas: 3
 
     service_3:
-        image: tdcole/service_3:latest
+        image: tdcole/sfia2:service_3
         networks:
             - ingress
         deploy:
             replicas: 3
 
     service_4:
-        image: tdcole/service_4:latest
+        image: tdcole/sfia2:service_4
         networks:
             - ingress
         deploy:
             replicas: 3
 
     service_nginx:
-        image: tdcole/nginx:latest
+        image: tdcole/sfia2:nginx
         ports:
             - "80:80"
         networks:
