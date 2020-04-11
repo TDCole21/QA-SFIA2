@@ -3,40 +3,40 @@ version: "3.7"
 services:
 
     service_1:
-        image: syed951/microservice_1
+        image: service1
         environment: 
-            - MYSQLHOST=${MYSQLHOST}
-            - MYSQLUSER=${MYSQLUSER}
-            - MYSQLPASSWORD=${MYSQLPASSWORD}
-            - MYSQLDB=${MYSQLDB}
+            - MYSQL_HOST=${MYSQL_HOST}
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+            - MYSQL_DB=${MYSQL_DB}
         networks:
             - ingress
         deploy:
             replicas: 3
 
     service_2:
-        image: syed951/microservice_2
+        image: service2
         networks:
             - ingress
         deploy:
             replicas: 3
 
     service_3:
-        image: syed951/microservice_3
+        image: service3
         networks:
             - ingress
         deploy:
             replicas: 3
 
     service_4:
-        image: syed951/microservice_4
+        image: service4
         networks:
             - ingress
         deploy:
             replicas: 3
 
     service_nginx:
-        image: syed951/microservice_nginx
+        image: nginx
         ports:
             - "80:80"
         networks:
