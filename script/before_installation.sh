@@ -2,9 +2,9 @@
 
 #install python3 and pip
 
-apt install -y python 
+sudo apt install -y python 
 
-apt install -y python-pip
+sudo apt install -y python-pip
 
 # make sure ~/.local/bin exists and is on your PATH
 mkdir -p ~/.local/bin
