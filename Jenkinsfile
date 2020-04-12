@@ -4,7 +4,7 @@ pipeline {
     stages{
 
             stage('Dependencies'){
-                agent {label 'master'}
+                // agent {label 'master'}
                 steps{
                     sh 'chmod +x ./script/*'
                     sh 'bash ./script/before_installation.sh'
@@ -13,7 +13,7 @@ pipeline {
             }
 
             stage('Deploying Docker Stack'){
-                agent {label 'manager_node'}
+                // agent {label 'manager_node'}
                 steps{
                     sh 'chmod +x ./script/*'
                     sh './script/docker.sh'
