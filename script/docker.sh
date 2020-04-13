@@ -5,7 +5,5 @@ source ~/.bashrc
 echo "test2"
 sudo usermod -aG docker ${USER}
 echo "test3"
-sudo su - ${USER}
+sudo docker stack deploy --compose-file docker-compose.yml superherostack 
 echo "test4"
-docker stack deploy --compose-file docker-compose.yml superherostack 
-echo "test5"
