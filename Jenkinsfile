@@ -21,5 +21,11 @@ pipeline {
                 }
             }
 
+            stage('Testing Environment'){
+                steps{
+                sh './script/test.sh'
+            }
+        }
+
     }
 }

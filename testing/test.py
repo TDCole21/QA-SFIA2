@@ -15,7 +15,7 @@ app.config['MYSQL_DB']=os.environ['MYSQL_DB']
 
 mysql = MySQL(app)
 
-url = "http://35.246.48.106/"
+url = "http://35.246.71.197/"
 url2 = "http://35.189.90.40/"
 
 def test_node_manager():
@@ -35,28 +35,3 @@ def test_getresponse():
 def test_getresponse2():
     r = requests.get(url)
     assert isinstance(r.text, str)
-
-# def test_csv_service2():
-#     for row in open("/home/Admin/projects/RapperNameGenerator/service_2/application/first.txt"):
-#         coloumnlist = str(row)
-#         coloumnlist = coloumnlist.split(",")
-#     assert len(coloumnlist) == 25
-
-# def test_csv_service3():
-#     for row in open("/home/Admin/projects/RapperNameGenerator/service_3/application/last.txt"):
-#         coloumnlist = str(row)
-#         coloumnlist = coloumnlist.split(",")
-#     assert len(coloumnlist) == 16
-
-# def test_sql_insert():
-#     with app.app_context():
-#         cur = mysql.connection.cursor()
-#         numRecordsOld = cur.execute("SELECT * FROM entries")
-#         print(numRecordsOld)
-#         cur.execute("INSERT INTO entries(name_old, name_new) VALUES ('Mark', 'Big Smoke');")
-#         mysql.connection.commit()
-#         numRecordsNew = cur.execute("SELECT * FROM entries")
-#         print(numRecordsNew)
-#         mysql.connection.commit()
-#         cur.close()
-#         assert numRecordsNew >= numRecordsOld
