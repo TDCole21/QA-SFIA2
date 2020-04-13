@@ -16,7 +16,7 @@ app.config['MYSQL_DB']=os.environ['MYSQL_DB']
 mysql = MySQL(app)
 
 url = "http://35.246.48.106/"
-url2 = "http://34.89.110.7/"
+url2 = "http://35.189.90.40/"
 
 def test_node_manager():
     http = urllib3.PoolManager()
