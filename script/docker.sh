@@ -7,5 +7,5 @@ sudo usermod -aG docker ${USER}
 echo "test3"
 sudo su - ${USER}
 echo "test4"
-docker stack deploy --compose-file docker-compose.yml superherostack 
+sudo docker stack deploy --compose-file docker-compose.yml superherostack 
 echo "test5"
