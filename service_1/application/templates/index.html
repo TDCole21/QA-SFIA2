@@ -14,8 +14,12 @@
                 {{ sentence }}
             </p>
 
-            <button onclick="window.location.reload();">
-                Generate name
-            </button>
+            <form method="POST" action="{{ url_for('home_create') }}">
+                <center>
+                <H1>Your Name</H1>
+                <input type = "text" name= "name" />
+                <input type = "submit">
+                </center>
+            </form>
         </body>
     </html>  
