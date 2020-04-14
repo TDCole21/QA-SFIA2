@@ -14,12 +14,19 @@
                 {{ sentence }}
             </p>
 
-            <button onclick="window.location.reload();">
-                Generate Hero name
-            </button>
 
-            <button onclick="window.location.reload();">
-                Generate Villain name
-            </button>
+            <form method="POST" action="{{ url_for('home_create_hero') }}">
+                <center>
+                <H1>Generate Hero name</H1>
+                <input type = "submit">
+                </center>
+            </form>
+
+            <form method="POST" action="{{ url_for('home_create_villain') }}">
+                <center>
+                <H1>Generate Villain name</H1>
+                <input type = "submit">
+                </center>
+            </form>
         </body>
     </html>  
