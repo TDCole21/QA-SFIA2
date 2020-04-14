@@ -142,17 +142,31 @@ I used the MoSCow Prioritisation Method on the Kanban Board with the following k
 I defined "done" as to mean that the feature had been successfully implemented into the application, and had no negative effect on the testing features. If a feature negatively impacted the test results, they were logged into the bugs column.
 
 #### First Sprint <a name="sprint1"></a>
-![Initial Kanban Board](https://i.imgur.com/JEitCVN.png)
+![Initial Kanban Board](https://i.imgur.com/atJdkjJ.png)
 
-#### Nth Sprint <a name="sprintn"></a>
-To include the nth kanban board.
+#### Second Sprint <a name="sprint2"></a>
+As I entered the second sprint, I adapted my Kanban board to include dynamic rolling project management goals, such as initial, rolling and final risk assessments. I had successfully connected to my new VM and generated my initial risk assessment and matrix. I did however encounter my first bug; accessing the new VM via ssh. The authorisied keys file needed deleting and the SSH pub key needed re-entering into the GCP console. 
+![Second Kanban Board](https://i.imgur.com/mF0Ax0e.png)
+
+#### Third Sprint <a name="sprint3"></a>
+The third sprint was to get the application to running off individual services that were yet to be connected in a internal network. Running each application independently they were able to pass information from one another. 
+![Third Kanban Board](https://i.imgur.com/Y8G0SXi.png)
+
+#### Fourth Sprint <a name="sprint4"></a>
+By the fourth sprint, the application had been "dockerised". Using dockerswarm and stack, an internal network had been made for which the services could communicate between one another. 
+![Fourth Kanban Board](https://i.imgur.com/Rv8vELO.png)
+
+#### Fifth Sprint <a name="sprint5"></a>
+I now needed to set up Jenkins, so that it would be activated by a github webhook to build and deploy the application every time the developer branch would merge with the master branch. Unfortunately this presented itself with a lot of new bugs, to install some of the required packages for Jenkins to run the pipeline, the VM that Jenkins was on needed to be restarted, this meant the IP address would be changed and numerous tweaks needed to be made to the backend of the application.
+![Fifth Kanban Board](https://i.imgur.com/TKL138o.png)
 
 #### Final Sprint <a name="final_sprint"></a>
-To include the final kanban board.
+The MVP had now been completed; the application was running on 4 independent services, each a container within a private network that was being orchestrated by ansible. The server was also set up using Jenkins to ensure a continuous integration.#
+![Final Kanban Board](https://i.imgur.com/7TXfjxv.png)
 
 #### Future Sprint <a name="future_sprint"></a>
-To include the a kanban board that details how I would implement future improvements.
-More detailed in retrospective.
+If I had more time for this project, there are more features I would like to implement as detailed in the improvements for future section further down. My initial future sprint would be to implement a MySQL database such that the generated names would be saved to a database.
+![Future Kanban Board](https://i.imgur.com/F1TnJga.png)
 
 ### Time Management <a name="time_management"></a>
 Include gantt chart
