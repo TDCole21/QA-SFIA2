@@ -19,6 +19,6 @@ def ending_hero():
 @app.route('/randomphrase/villain', methods=['GET', 'POST'])
 def ending_villain():
 
-	list = ['Woman', 'Man', 'Fist', 'Hero', 'Legend', 'God', 'Saint']
+	list = ['Evil', 'Man', 'Doom', 'Villain', 'Dark', 'Devil', 'Demon']
 	
 	return list[random.randrange(6)]
