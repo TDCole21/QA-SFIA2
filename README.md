@@ -169,8 +169,9 @@ If I had more time for this project, there are more features I would like to imp
 ![Future Kanban Board](https://i.imgur.com/F1TnJga.png)
 
 ### Time Management <a name="time_management"></a>
-Include gantt chart
-Document every activity taken
+![Initial Gantt Chart](https://i.imgur.com/ZVc1MKX.png)
+![Ongoing Gantt Chart](https://i.imgur.com/GaXhDZk.png)
+![Final and Future Gantt Chart](https://i.imgur.com/3tPDFZ8.png)
 
 ## Feature Branch Model <a name="feature_branch"></a>
 For this project I used a feature branch model that has three tiers:
@@ -253,10 +254,24 @@ The Risk Management categories are: Response Strategy.
 |2.3|Jenkins pipeline error|Unlikely|Minor|Trivial|A problem with Jenkins compatibility with the GitHub webhooks would mean that the pipeline would not automatically run for every push to GitHub, compromising the autonomy of the continuous integration|If not able to be resolved by the deadline, then manual build requests in Jenkins can be used.|
 
 ### Ongoing Risk Assessment <a name="ongoing_risk_matrix"></a>
-How I added/removed/edited risks as the project progressed
+|Risk ID|Description|Likelihood|Impact|Risk|Consequence|Response Strategy|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|1.1|Data compromised|Unlikely|Major|Tolerable|Potential loss of large sections of the project, resulting in setbacks|Using the branch feature in git, and ensuring a frequently updated branch method|
+|1.2|GCP (Google Cloud Processing) budget limit exceeded|Rare|Minimal|Trivial|Personal financial cost, whilst minimal setback to project progress|Google provides $300 initial budget for all users, and disables the autopayment if the allowance runs out. To prevent this from becoming a problem, I have to ensure that feature doesn't become enabled, and to keep an eye on my remaining budget.|
+|1.3|Internet Connectivity Problems|Likely|Major|Substantial|A lot of the work for this project is done on virtual machines and requires a constant internet connection. Missing this would require large periods of time without being able to work on or update the project|There is some work that can be drafted offline before being pushed up to the cloud. If the problem seriously effects the work, then let the trainer know, such that it can be taken into consideration|
+|2.1|Time mismanagement|Possible|Major|Moderate|Falling behind on tasks means rushing on certain aspects of the project and can result in a lower quality of work.|Using methods such as a Trello board and gantt chart to track my progress and ensure I don't fall behind on my work. If my work starts to fall behind, I can work on my project before/after training hours. |
+|2.2|Lack of content knowledge|Possible|Major|Substantial|A lack of understanding of the content covered in the academy will mean that I am unable to fulfill requirements needed for the project|I will first search the internet fo the answers to any questions I have, then seek peer help if I cannot find the answer, before finally approaching my trainer|
+|2.3|Jenkins pipeline error|Unlikely|Minor|Trivial|A problem with Jenkins compatibility with the GitHub webhooks would mean that the pipeline would not automatically run for every push to GitHub, compromising the autonomy of the continuous integration|If not able to be resolved by the deadline, then manual build requests in Jenkins can be used.|
 
 ### Final Risk Assessment <a name="final_risk_matrix"></a>
-The resulting risk assessment
+|Risk ID|Description|Likelihood|Impact|Risk|Consequence|Response Strategy|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|1.1|Data compromised|Unlikely|Major|Tolerable|Potential loss of large sections of the project, resulting in setbacks|Using the branch feature in git, and ensuring a frequently updated branch method|
+|1.2|GCP (Google Cloud Processing) budget limit exceeded|Rare|Minimal|Trivial|Personal financial cost, whilst minimal setback to project progress|Google provides $300 initial budget for all users, and disables the autopayment if the allowance runs out. To prevent this from becoming a problem, I have to ensure that feature doesn't become enabled, and to keep an eye on my remaining budget.|
+|1.3|Internet Connectivity Problems|Likely|Major|Substantial|A lot of the work for this project is done on virtual machines and requires a constant internet connection. Missing this would require large periods of time without being able to work on or update the project|There is some work that can be drafted offline before being pushed up to the cloud. If the problem seriously effects the work, then let the trainer know, such that it can be taken into consideration|
+|2.1|Time mismanagement|Possible|Major|Moderate|Falling behind on tasks means rushing on certain aspects of the project and can result in a lower quality of work.|Using methods such as a Trello board and gantt chart to track my progress and ensure I don't fall behind on my work. If my work starts to fall behind, I can work on my project before/after training hours. |
+|2.2|Lack of content knowledge|Possible|Major|Substantial|A lack of understanding of the content covered in the academy will mean that I am unable to fulfill requirements needed for the project|I will first search the internet fo the answers to any questions I have, then seek peer help if I cannot find the answer, before finally approaching my trainer|
+|2.3|Jenkins pipeline error|Unlikely|Minor|Trivial|A problem with Jenkins compatibility with the GitHub webhooks would mean that the pipeline would not automatically run for every push to GitHub, compromising the autonomy of the continuous integration|If not able to be resolved by the deadline, then manual build requests in Jenkins can be used.|
 
 ## Project Architecture <a name="project_architecture"></a>
 ### Tools <a name="project_tools"></a>
@@ -292,9 +307,11 @@ I used a unit, integration and acceptance testing method as a measure of my code
 
 ### Unit Testing <a name="unit_testing"></a>
 Unit testing is where individual units/ components of a software are tested. The purpose is to validate that each unit of the software performs as designed. A unit usually has one or a few inputs and usually a single output. It is the smallest testable part of any software, hence why I ran a URL and DB pytest to test each CRUD function and URL link.
+![Pytest](https://i.imgur.com/jAVxZy3.png)
 
 ### Integration Testing <a name="integration_testing"></a>
 Integration testing is where individual units are combined and tested as a group. The purpose of this level of testing is to expose faults in the interaction between integrated units. Coverage reports is a type of integration testing, and a target of +35% is adequate, 50%+ is acceptable and 80+% is desired. Add discussion for more marks.
+![Coverage Report](https://i.imgur.com/FFZQEE7.png)
 
 ### Acceptance Testing <a name="acceptance_testing"></a>
 Acceptance Testing, also known as operational readiness testing, refers to the checking done to a system to ensure that processes and procedures are in place to allow the system to be used and maintained. This includes checks done to back-up facilities, procedures for disaster recovery, training for end users, maintenance procedures, and security procedures.
