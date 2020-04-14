@@ -18,6 +18,6 @@ def beginning_hero():
 @app.route('/randomphrase/villain', methods=['GET', 'POST'])
 def beginning_villain():
 
-	list = ['Super ','Bat ','Wonder ','The Amazing ','Dr. ', 'The Incredible ','Iron ']
+	list = ['Dasterdly ','Evil ','Malicious ','The Destroyer of Worlds, ','Dr. ', 'The Villainous ','Dark ']
 	
 	return list[random.randrange(6)]
